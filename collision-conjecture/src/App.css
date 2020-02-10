@@ -1,0 +1,43 @@
+.App {
+  text-align: center;
+}
+
+.h1 {
+  color:white;
+  margin: 3%;
+  font-family: 'Orbitron', sans-serif;
+  max-width: 35%;
+  z-index: 2;
+}
+
+#body {
+display: flex;
+flex-direction: column;
+}
+
+.satellite-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 13%;
+  margin-left: 5%;
+}
+
+#map-satellites-button, #reset-satellites-button {
+  font-family: 'Orbitron', sans-serif;
+  font-size: x-large;
+  margin-top: 3%;
+  background-color: rgb(48, 45, 45);
+  color: white;
+  box-shadow: 0.5px 0.5px 2px 2px rgb(197, 187, 187);
+  z-index: 1;
+  position: static;
+  cursor: pointer;
+}
+
+#map-satellites-button {
+  margin-top: 6%;
+  margin-bottom: 5%;
+}
+
+
+
