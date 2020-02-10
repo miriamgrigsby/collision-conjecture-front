@@ -4,7 +4,7 @@
 
 .h1 {
   color:white;
-  margin: 3%;
+  margin: 2.3%;
   font-family: 'Orbitron', sans-serif;
   max-width: 35%;
   z-index: 2;
@@ -19,7 +19,7 @@ flex-direction: column;
   display: flex;
   flex-direction: column;
   width: 13%;
-  margin-left: 5%;
+  margin-left: 7.75%;
 }
 
 #map-satellites-button, #reset-satellites-button {
@@ -39,5 +39,57 @@ flex-direction: column;
   margin-bottom: 5%;
 }
 
+.filter-satellites {
+  z-index: 1;
+  margin-left: 2.5%;
+}
 
+.filter-form {
+  font-size: large;
+  font-family: 'Orbitron', sans-serif;
+}
 
+.showModal{
+  font-family: 'Orbitron', sans-serif;
+  font-size: x-large;
+  max-width: fit-content;
+  background-color: rgb(48, 45, 45);
+  color: white;
+  box-shadow: 0.5px 0.5px 2px 2px rgb(197, 187, 187);
+  z-index: 1;
+  cursor: pointer;
+  margin-left: 7.75%;
+  margin-top: 1%;
+}
+
+.Modal {
+  font-family: 'Orbitron', sans-serif;
+  font-size: x-large;
+  margin-top: 1%;
+  background-color: rgb(48, 45, 45);
+  box-shadow: 0.5px 0.5px 2px 2px rgb(197, 187, 187);
+  z-index: 1;
+  text-align: center;
+  width: 500px;
+  color: white;
+  visibility: visible;
+  
+}
+
+.content {
+  padding: 1rem;
+}
+.actions {
+  
+  padding: 0.5rem 1rem;
+  
+}
+
+#centered-toggle-button {
+position: absolute;
+}
+
+  /* .main-body {
+    display: flex;
+    flex-direction: row;
+  } */

@@ -13,8 +13,9 @@ const Globe = ({positions, showSatellites}) => {
     }
 
     const point = { pixelSize: 5, color: Cesium.Color.RED, outlineWidth: 2}
+
     const dotPosition = positions.map(position => {
-        return  <Entity position={Cartesian3.fromDegrees(position.lon, position.lat)} point={point} longitude={position.lon} latitude={position.lat} key={position.id} onClick={() => handleClick(position)}/>
+        return  <Entity position={Cartesian3.fromDegrees(position.lon, position.lat)} point={point} longitude={position.lon} latitude={position.lat} key={position.id} name={position.name} country={position.country} onClick={() => handleClick(position)} />
        
     })
 
