@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import Globe from "./Globe.js"
-import { FilterSatellites } from './FilterSatellites'
-import Modal from './Modal.js'
+import {FilterSatellites}  from './FilterSatellites'
+import Cesium from "cesium";
 
+var unique = require('uniq')
 
 class App extends Component {
 
@@ -12,8 +13,6 @@ class App extends Component {
     latitude: 0.0,
     longitude: 0.0,
     searchTerm: "",
-    show: false,
-    showButton: false
   }
 
   componentDidMount() {
@@ -28,7 +27,6 @@ class App extends Component {
     this.setState({
       latitude: position.lat,
       longitude: position.lon,
-      showButton: true
     })
   }
 
@@ -42,50 +40,43 @@ class App extends Component {
     .filter(position => {
       return position.name.toUpperCase().includes(this.state.searchTerm.toUpperCase()) || position.country.toUpperCase().includes(this.state.searchTerm.toUpperCase())
     })
-
-
-  showModal = () => {
+   
+  filterSubmit = (position) => {
     this.setState({
-      show: true,
-      showButton: false
-    });
+      latitude: position.lat,
+      longitude: position.lon,
+    })
+  }
 
-  };
+  // viewer = new Cesium.Viewer('root')
+  // console.log(viewer)
 
-  hideModal = () => {
-    this.setState({
-      show: false
-    });
-  };
+//   viewer.camera.flyTo({
+//   destination : Cesium.Cartesian3.fromDegrees(-122.22, 46.12, 5000.0),
+//   orientation : {
+//       heading : Cesium.Math.toRadians(20.0),
+//       pitch : Cesium.Math.toRadians(-35.0),
+//       roll : 0.0
+//   }
+// })
 
 
   render() {
-    const { showButton } = this.state
     return (
       <div id="body">
         <h1 className="h1">Collision Conjecture</h1>
         <Globe positions={this.filterLocations()} showSatellites={this.showSatellites} />
-        <FilterSatellites updateSearchTerm={this.updateSearchTerm} searchTerm={this.state.searchTerm} />
+        <FilterSatellites updateSearchTerm={this.updateSearchTerm} searchTerm={this.state.searchTerm} filterSubmit={this.filterSubmit} positions={this.state.positions}/>
         <div className="satellite-buttons">
           <button id="map-satellites-button">Map Satellites</button>
           <button id="reset-satellites-button">Reset</button>
-
         </div>
-        {showButton
-          ? <button onClick={this.showModal}
-            className="showModal">More Info</button>
-          : null
-        }
-        <Modal show={this.state.show} hideModal={this.hideModal} />
+        
       </div>
     )
   }
 }
 
-
-
-
 export default App
-
 
 

@@ -41,7 +41,7 @@ flex-direction: column;
 
 .filter-satellites {
   z-index: 1;
-  margin-left: 2.5%;
+  margin-left: 5.5%;
 }
 
 .filter-form {
@@ -49,47 +49,26 @@ flex-direction: column;
   font-family: 'Orbitron', sans-serif;
 }
 
-.showModal{
+.cesium-infoBox {
+  background-color: rgb(48, 45, 45);
+  box-shadow: 0.5px 0.5px 2px 2px rgb(197, 187, 187);
   font-family: 'Orbitron', sans-serif;
-  font-size: x-large;
+  font-size: larger;
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
   max-width: fit-content;
-  background-color: rgb(48, 45, 45);
-  color: white;
-  box-shadow: 0.5px 0.5px 2px 2px rgb(197, 187, 187);
-  z-index: 1;
-  cursor: pointer;
-  margin-left: 7.75%;
-  margin-top: 1%;
+
 }
 
-.Modal {
+.cesium-infoBox-title {
+  background-color: rgb(143, 40, 40);
+  color: black;
+  font-weight: bold;
+}
+
+.filter-submit {
+  margin-left: 1%;
   font-family: 'Orbitron', sans-serif;
-  font-size: x-large;
-  margin-top: 1%;
-  background-color: rgb(48, 45, 45);
-  box-shadow: 0.5px 0.5px 2px 2px rgb(197, 187, 187);
-  z-index: 1;
-  text-align: center;
-  width: 500px;
-  color: white;
-  visibility: visible;
-  
+  font-size: large;
 }
-
-.content {
-  padding: 1rem;
-}
-.actions {
-  
-  padding: 0.5rem 1rem;
-  
-}
-
-#centered-toggle-button {
-position: absolute;
-}
-
-  /* .main-body {
-    display: flex;
-    flex-direction: row;
-  } */
