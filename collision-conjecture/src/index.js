@@ -7,4 +7,3 @@ ReactDOM.render(<App />, document.getElementById("root"));
 
 
 
-// ReactDOM.render(<SatelliteMapper />, document.getElementById("root"));

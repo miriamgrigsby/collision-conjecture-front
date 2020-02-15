@@ -5,6 +5,7 @@
 .h1 {
   color:white;
   margin: 2.3%;
+  margin-top: -1%;
   font-family: 'Orbitron', sans-serif;
   max-width: 35%;
   z-index: 2;
@@ -17,26 +18,44 @@ flex-direction: column;
 
 .satellite-buttons {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 13%;
-  margin-left: 7.75%;
+  margin-left: 3%;
 }
 
-#map-satellites-button, #reset-satellites-button {
+#map-satellites-button, #reset-satellites-button, #map-random-satellites {
   font-family: 'Orbitron', sans-serif;
   font-size: x-large;
   margin-top: 3%;
   background-color: rgb(48, 45, 45);
   color: white;
-  box-shadow: 0.5px 0.5px 2px 2px rgb(197, 187, 187);
+  box-shadow: -2px -2px 4px rgb(197, 187, 187),
+  2px 2px 3px rgb(197, 187, 187);
   z-index: 1;
   position: static;
   cursor: pointer;
+  width: fit-content;
+  height: 65px;
+}
+
+#map-random-satellites {
+  margin-right: 8%;
+  margin-top: 6%;
+}
+
+#reset-satellites-button {
+  margin-left: 9%;
+  margin-top: 1%;
+  height: fit-content;
+}
+
+#all-buttons {
+  display: flex;
+  flex-direction: column;
 }
 
 #map-satellites-button {
   margin-top: 6%;
-  margin-bottom: 5%;
 }
 
 .filter-satellites {
@@ -71,4 +90,482 @@ flex-direction: column;
   margin-left: 1%;
   font-family: 'Orbitron', sans-serif;
   font-size: large;
+  box-shadow: 0.5px 0.5px 2px 2px rgb(248, 246, 246);
+
+}
+
+.planet-buttons {
+  display: flex;
+  z-index: 5;
+  flex-wrap: wrap;
+  margin-left:30%;
+  margin-top: 21.5%;
+  height: 1000px;
+  flex-direction: column;
+  max-width: min-content;
+  display: block;
+  color: transparent;
+  transform: rotate(270deg);
+  position: absolute;
+}
+
+#moon-gif {
+  z-index: 1;
+  margin-left: 70%;
+  margin-top: -23%;
+  width: 40px;
+  height: 40px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/1a/Moon_rotating_full_220px.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 100%;
+  box-shadow: -2px -2px 4px rgb(78, 67, 67),
+  2px 2px 3px rgb(78, 67, 67)
+  ;
+  cursor: pointer;
+  visibility: visible;
+}
+
+#moon {
+  z-index: 2;
+  margin-left: 27%;
+  margin-top: 7.5%;
+  width: 650px;
+  height: 675px;
+  background-image: url(https://www.unawe.org/static/activities/bc66e47b-b570-4f51-baac-d02d1ee1a2de/Mod_1_Image_1_full_moon_Gregory_H_Revera-01.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  visibility: hidden;
+  position: absolute;
+}
+
+
+#sun {
+  z-index: 2;
+  margin-left: 22%;
+  margin-top: 2.75%;
+  width: 800px;
+  height: 800px;
+  background-image: url(https://78405a.medialib.edu.glogster.com/Sd49PWaTV8qhauIzNDZH/media/e5/e5a15b719d26bd2c5563d13e4f7600239f64b37f/sun22.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  visibility: hidden;
+  position: absolute;
+  cursor: pointer;
+}
+
+#mercury {
+  z-index: 2;
+  margin-left: 24.5%;
+  margin-top: 5.5%;
+  width: 725px;
+  height: 725px;
+  background-image: url(https://i.pinimg.com/originals/1d/bf/34/1dbf348789c616f2746c273e34354e55.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  visibility: hidden;
+  position: absolute;
+  cursor: pointer;
+}
+
+#venus {
+  z-index: 2;
+  margin-left: 22.75%;
+  margin-top: 4.5%;
+  width: 755px;
+  height: 755px;
+  background-image: url(https://webstockreview.net/images/jupiter-clipart-venus-planet-5.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  visibility: hidden;
+  position: absolute;
+  cursor: pointer;
+}
+
+#earth {
+  z-index: 1;
+  margin-left: 28%;
+  margin-top: 8.99%;
+  width: 620px;
+  height: 620px;
+  /* background-image: url(./earthAnomaly.png);
+   */
+   background-image: url(https://i.pinimg.com/originals/da/91/a5/da91a5cced0e4c266498a10e3bea2d1c.gif);
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center;
+  visibility: hidden;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 100%;
+}
+
+#mars {
+  z-index: 2;
+  margin-left: 26.1%;
+  margin-top: 7.8%;
+  width: 660px;
+  height: 660px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/68/Mars_%2816716283421%29_-_Transparent_background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  visibility: hidden;
+  position: absolute;
+  cursor: pointer;
+}
+
+#jupiter {
+  z-index: 2;
+  margin-left: 26.5%;
+  margin-top: 7.75%;
+  width: 650px;
+  height: 650px;
+  background-image: url(https://www.slsc.org/wp-content/uploads/2018/11/Jupiter.H16.2k-e1544027881518-960x982.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  visibility: hidden;
+  position: absolute;
+  cursor: pointer;
+}
+
+#saturn {
+  z-index: 2;
+  margin-left: -2%;
+  margin-top: -21.25%;
+  width: 1480px;
+  height: 1480px;
+  background-image: url(https://www.solarsystemscope.com/spacepedia/images/handbook/renders/saturn.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  visibility: hidden;
+  position: absolute;
+  cursor: pointer;
+  transform: rotate(38deg)
+}
+
+#uranus {
+  z-index: 2;
+  margin-left: 28%;
+  margin-top: 9.2%;
+  width: 615px;
+  height: 615px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/16/Uranus2-transparent.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  visibility: hidden;
+  position: absolute;
+  cursor: pointer;
+}
+
+#neptune {
+  z-index: 2;
+  margin-left: 28%;
+  margin-top: 9.1%;
+  width: 620px;
+  height: 620px;
+  background-image: url(https://cdn.thinglink.me/api/image/649255151860711426/1240/10/scaletowidth);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  visibility: hidden;
+  position: absolute;
+  cursor: pointer;
+}
+
+#pluto {
+  z-index: 2;
+  margin-left: -1%;
+  margin-top: -15%;
+  width: 1300px;
+  height: 1300px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a1/PIA19873-Pluto-NewHorizons-FlyingPastImage-20150714-transparent.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  visibility: hidden;
+  position: absolute;
+  cursor: pointer;
+}
+
+
+#mars-gif {
+  z-index: 1;
+  margin-left: 38%;
+  margin-top: 7%;
+  width: 60px;
+  height: 60px;
+  background-image: url(https://i.pinimg.com/originals/2f/79/00/2f7900381868b32d000ac5307c13dba4.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 100%;
+  cursor: pointer;
+  visibility: visible;
+  transform: rotate(90deg)
+}
+
+#mercury-gif {
+  z-index: 1;
+  margin-left: 45%;
+  margin-top: 1%;
+  width: 30px;
+  height: 30px;
+  background-image: url(https://media.giphy.com/media/wl1bNaIrfOyqI/giphy.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 104%;
+  box-shadow: -2px -2px 4px rgb(78, 67, 67),
+  2px 2px 3px rgb(78, 67, 67)
+  ;
+  cursor: pointer;
+  visibility: visible;
+  transform: rotate(90deg);
+}
+
+
+#jupiter-gif {
+  z-index: 1;
+  margin-left: 25%;
+  margin-right: 5%;
+  margin-top: 2%;
+  width: 110px;
+  height: 110px;
+  background-image: url(https://i.gifer.com/WME4.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 104%;
+  box-shadow: -2px -2px 4px rgb(78, 67, 67),
+  2px 2px 3px rgb(78, 67, 67)
+  ;
+  cursor: pointer;
+  visibility: visible;
+  transform: rotate(90deg)
+}
+
+#saturn-gif {
+  z-index: 1;
+  margin-top: -22%;
+  margin-left: 2%;
+  margin-top: 10%;
+  width: 210px;
+  height: 210px;
+  background-image: url(https://ii.yuki.la/b/f1/617d8960284c094e2c88eeba85f908c3106afc98bc63e0cc20461482f2400f1b.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+  visibility: visible;
+  border-radius: 80%;
+  cursor: pointer;
+  transform: rotate(70deg)
+}
+
+
+#sun-gif {
+  z-index: 1;
+  margin-left: 11%;
+  width: 160px;
+  height: 160px;
+  background-image: url(https://media2.giphy.com/media/YgEY6pqEu88Ks/source.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 100%; 
+  cursor: pointer;
+  transform: rotate(90deg);
+
+}
+
+#venus-gif {
+  z-index: 1;
+  margin-left: 36%;
+  margin-top: 3%;
+  width: 70px;
+  height: 70px;
+  background-image: url(https://media.giphy.com/media/JRZwMhzk7WolG/giphy.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120%;
+  border-radius: 98%; 
+  cursor: pointer;
+  transform: rotate(90deg);
+
+}
+
+#earth-gif {
+  z-index: 1;
+  margin-top: 2%;
+  margin-left: 37%;
+  width: 60px;
+  height: 60px;
+  background-image: url(https://gifimage.net/wp-content/uploads/2018/05/spinning-world-gif-6.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120%;
+  border-radius: 98%; 
+  cursor: pointer;
+  transform: rotate(90deg)
+}
+
+#neptune-gif {
+  z-index: 1;
+  margin-left: 35%;
+  margin-top: -6.5%;
+  margin-top: -3%;
+  width: 75px;
+  height: 75px;
+  background-image: url(https://static.wixstatic.com/media/09b301_cc28b0e9d5d74836b53c12776044bfa3~mv2.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  border-radius: 100%; 
+  cursor: pointer;
+  transform: rotate(90deg);
+
+}
+
+.iframe {
+  margin-left:68%;
+  margin-top: 10%;
+  cursor: pointer;
+  z-index: 3;
+  display: none;
+}
+
+#uranus-gif {
+  z-index: 1;
+  margin-left: 35%;
+  margin-top: -26.5%;
+  margin-top: 5%;
+  width: 70px;
+  height: 70px;
+  background-image: url(https://www.centraldatacore.com/wp-content/uploads/PG3-Uranus-500-P-Anim.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120%;
+  border-radius: 100%; 
+  cursor: pointer;
+}
+ 
+#pluto-gif {
+  z-index: 1;
+  margin-left: 49%;
+  margin-top: -3%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 20px;
+  height: 20px;
+  background-image: url(https://i.pinimg.com/originals/20/fe/6d/20fe6d99fff9cd63b7dd82c5c4db5bbf.gif);
+  background-position: center;
+  background-size: 120%;
+  border-radius: 100%; 
+  cursor: pointer;
+  transform: rotate(90deg);
+
+}
+
+#show-toolbar {
+  z-index: 1;
+  font-family: 'Orbitron', sans-serif;
+  width: fit-content;
+  text-align: center;
+  font-size: xx-large;
+  margin-left: 83.5%;
+  background-color: transparent;
+  color: whitesmoke;
+  border: none;
+  cursor: pointer;
+}
+
+#toggle-planets {
+  margin-top: 50%;
+  z-index: 3;
+  font-family: 'Orbitron', sans-serif;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: xx-large;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  background-image: url(https://i.ya-webdesign.com/images/trippy-transparent-planet-3.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  position: absolute;
+}
+
+#toggle-planets:focus {
+  outline: none;
+}
+
+#show-toolbar:focus, .allDebris-button, .debris-button {
+  outline: none;
+}
+
+
+.debris-button {
+  font-family: 'Orbitron', sans-serif;
+  font-size: x-large;
+  margin-top: 5%;
+  margin-left: 88.5%;
+  background-color: rgb(48, 45, 45);
+  color: white;
+  box-shadow: -2px -2px 4px rgb(197, 187, 187),
+  2px 2px 3px rgb(197, 187, 187);
+  z-index: 1;
+  position: static;
+  cursor: pointer;
+  width: fit-content;
+  height: 65px;
+  position: absolute;
+  display: block;
+}
+
+
+.cesium-viewer-bottom {
+  display: none;
+}
+
+.cesium-viewer-toolbar, .cesium-viewer-animationContainer {
+  visibility: hidden;
+}
+
+.debris-buttons-all {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  margin-top: 7%;
+  margin-left: 2.6%;
+  box-shadow: -2px -2px 4px rgb(141, 138, 138),
+  2px 2px 4px rgb(141, 138, 138);
+  align-items: center;
+}
+
+.allDebris-button, .cosmo-button, .iridium-button, .indian-button, .fengyun-button {
+  font-family: 'Orbitron', sans-serif;
+  font-size: large;
+  background-color: rgb(48, 45, 45);
+  color: white;
+  margin: 2%;
+  box-shadow: -2px -2px 4px rgb(197, 187, 187),
+  2px 2px 3px rgb(197, 187, 187);
+  max-width: fit-content;
+  cursor: pointer;
 }
