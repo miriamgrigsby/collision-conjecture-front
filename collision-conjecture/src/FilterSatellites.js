@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const FilterSatellites = ({ searchTerm, updateSearchTerm, filterSubmit, positions, showFullStats, filterSubmit2 }) => {
+export const FilterSatellites = ({ searchTerm, updateSearchTerm, filterSubmit, positions, filterSubmit2, showFullStats }) => {
 
     const handleChange = (event) => {
         updateSearchTerm(event.target.value)
