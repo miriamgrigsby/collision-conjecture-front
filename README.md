@@ -13,7 +13,7 @@ Mapping satellite trajectories in real-time requires efficient rendering which R
 
 ## Getting Started
 
-If you wish to fork/clone the repo, do so in conjunction with the frontend found at [BackEnd Repo](https://github.com/miriamgrigsby/collision-conjecture-backend). 
+If you wish to fork/clone the repo, do so in conjunction with the backend found at [BackEnd Repo](https://github.com/miriamgrigsby/collision-conjecture-backend). 
 
 ### Ruby Version 
 
